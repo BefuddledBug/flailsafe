@@ -33,8 +33,11 @@ While primarily intended for config and .txt files, it can be used to monitor an
 Install
 
 To install Flailsafe v1.0 on your Linux system, just clone the repository and run the Makefile to install everything under /opt/flailsafe:
+
  git clone https://github.com/BefuddledBug/flailsafe.git
+
  cd flailsafe
+ 
  sudo make install
 
 Commands
