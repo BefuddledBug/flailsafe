@@ -1,3 +1,23 @@
+⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢠⡾⠛⢿⣇⣀⣼⡏⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⠿⣶⠋⠀⠀⠀⠠⣾⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⣇⣤⡿⠀⠀⠀⠀⠀⠘⠋⣠⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⠋⢹⡆⠀⠀⠀⠀⠀⠈⠻⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⢷⡾⢧⡄⠀⠀⠀⠀⠀⠀⠙⢿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣄⡁⠀⣿⠀⠀⣠⡇⠀⠀⠀⠈⠻⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢻⣿⣶⣄⠲⣦⣬⣁⠀⠀⠀⠀⠀⠙⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⣀⣀⠀⠘⣿⣿⠟⣠⣿⣿⡿⠓⠀⠀⠀⠀⠀⠈⢿⣿⣷⡄⠀⠀⠀⠀⠀⠀
+⠀⠈⠙⠏⣸⣷⣦⣴⣾⣿⣿⣿⡇⢾⣿⣿⡿⠟⠁⠀⠀⠹⣿⣿⣦⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠛⠋⠀⠀⠀⠀⠀⠀⠘⢿⣿⣷⡀⠀⠀⠀
+⠀⠀⠀⠀⠘⢿⣿⠟⣩⣤⣤⡍⢻⣿⡟⡀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⠄⠀⠀
+⠀⠀⠀⠀⣴⣦⠙⠆⢻⣿⣿⠃⠛⠋⢴⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣡⣴⡦⠀
+⠀⠀⠀⠀⠉⠀⠀⠀⠀⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+ ____  __     __   __  __    ____   __   ____  ____ 
+(  __)(  )   / _\ (  )(  )  / ___) / _\ (  __)(  __)
+ ) _) / (_/\/    \ )( / (_/\\___ \/    \ ) _)  ) _) 
+(__)  \____/\_/\_/(__)\____/(____/\_/\_/(__)  (____)
+
 flailsafe – monitor and version your config files
 Version 1.0 – by BefuddledBug
 
@@ -7,6 +27,13 @@ Flailsafe is a lightweight Bash utility designed to monitor files and automatica
 It is particularly useful for configuration files and text-based files, allowing you to track changes over time and quickly recover previous versions if needed.
 All monitored file copies are stored inside the internal var/vault directory, preserving historical versions for comparison and recovery purposes.
 While primarily intended for config and .txt files, it can be used to monitor any file at the user’s discretion.
+
+Install
+
+To install Flailsafe v1.0 on your Linux system, just clone the repository and run the Makefile to install everything under /opt/flailsafe:
+ git clone https://github.com/BefuddledBug/flailsafe.git
+ cd flailsafe
+ sudo make install
 
 Commands
 
@@ -38,6 +65,6 @@ Running periodic checks allows flailsafe to promptly detect configuration change
 Uninstall
 
 Flailsafe does not install services or modify system configuration files. To completely remove flailsafe and all stored data:
-sudo rm -rf /opt/flailsafe
+ sudo rm -rf /opt/flailsafe
 This will permanently delete all stored snapshots and logs.
 
