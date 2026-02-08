@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+FLAILSAFE_HOME="/opt/flailsafe"
+
+source "$FLAILSAFE_HOME/lib/config.sh"
+source "$FLAILSAFE_HOME/lib/utils.sh"
+
+command="${1:-}"
+
+case "$command" in
+  add)
+    shift
+    source "$FLAILSAFE_HOME/lib/commands/add.sh"
+    flailsafe_add "$@"
+    ;;
+  check)
+    shift
+    source "$FLAILSAFE_HOME/lib/commands/check.sh"
+    flailsafe_check
+    ;;
+  help|-h|--help)
+    shift
+    source "$FLAILSAFE_HOME/lib/commands/help.sh"
+    flailsafe_help
+    ;;
+  list)
+    shift
+    source "$FLAILSAFE_HOME/lib/commands/list.sh"
+    flailsafe_list
+    ;;
+  status)
+    shift
+    source "$FLAILSAFE_HOME/lib/commands/status.sh"
+    flailsafe_status "$@"
+    ;;
+  log)
+    shift
+    source "$FLAILSAFE_HOME/lib/commands/log.sh"
+    flailsafe_log
+    ;;
+  remove)
+    shift
+    source "$FLAILSAFE_HOME/lib/commands/remove.sh"
+    flailsafe_remove "$@"
+    ;;
+  purge)
+    shift
+    source "$FLAILSAFE_HOME/lib/commands/purge.sh"
+    flailsafe_purge "$@"
+    ;;
+
+  *)
+    echo "Usage: flailsafe {add|check|help|list|status|log|remove|purge}"
+    echo "Use 'flailsafe help' or 'flailsafe -h' to get help"
+    exit 1
+    ;;
+esac
+
