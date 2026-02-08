@@ -28,6 +28,7 @@ Overview
 Flailsafe is a lightweight Bash utility designed to monitor files and automatically keep versioned snapshots whenever changes occur.
 It is particularly useful for configuration files and text-based files, allowing you to track changes over time and quickly recover previous versions if needed.
 All monitored file copies are stored inside the internal var/vault directory, preserving historical versions for comparison and recovery purposes.
+Flailsafe does not implement automatic restore, because it never writes outside its own root directory. Restoring files is left to the user’s discretion.
 While primarily intended for config and .txt files, it can be used to monitor any file at the user’s discretion.
 
 Install
