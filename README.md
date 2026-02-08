@@ -23,7 +23,7 @@ flailsafe – monitor and version your config files
 
 Version 1.0 – by BefuddledBug
 
-Overview
+# Overview 
 
 Flailsafe is a lightweight Bash utility designed to monitor files and automatically keep versioned snapshots whenever changes occur.
 It is particularly useful for configuration files and text-based files, allowing you to track changes over time and quickly recover previous versions if needed.
@@ -31,7 +31,7 @@ All monitored file copies are stored inside the internal var/vault directory, pr
 Flailsafe does not implement automatic restore, because it never writes outside its own root directory. Restoring files is left to the user’s discretion.
 While primarily intended for config and .txt files, it can be used to monitor any file at the user’s discretion.
 
-Install
+# Install
 
 To install Flailsafe v1.0 on your Linux system, just clone the repository and run the Makefile to install everything under /opt/flailsafe:
 
@@ -41,7 +41,7 @@ To install Flailsafe v1.0 on your Linux system, just clone the repository and ru
  
  sudo make install
 
-Commands
+# Commands
 
  add <file> : Add a file to the monitoring list and store its initial copy in the vault. The file path must be absolute.
 
@@ -57,20 +57,24 @@ Commands
 
  purge <file> : Permanently delete all stored snapshots of a file from the vault.
 
-Examples
+# Examples
  sudo flailsafe add /etc/ssh/sshd_config
+ 
  sudo flailsafe check
+ 
  sudo /opt/flailsafe/bin/flailsafe log | grep /absolute/path/of/monitored/file
 
-Automated checks with cron
+# Automated checks with cron
 
 Flailsafe is designed to be most effective when file checks are executed regularly.
 For this reason, it is recommended to run flailsafe check automatically using root’s crontab.
 Running periodic checks allows flailsafe to promptly detect configuration changes and store new snapshots as soon as modifications occur.
 
-Uninstall
+# Uninstall
 
 Flailsafe does not install services or modify system configuration files. To completely remove flailsafe and all stored data:
+ 
  sudo rm -rf /opt/flailsafe
+ 
 This will permanently delete all stored snapshots and logs.
 
