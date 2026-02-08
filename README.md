@@ -20,6 +20,7 @@
 (__)  \____/\_/\_/(__)\____/(____/\_/\_/(__)  (____)
 ```
 flailsafe – monitor and version your config files
+
 Version 1.0 – by BefuddledBug
 
 Overview
