@@ -35,11 +35,11 @@ While primarily intended for config and .txt files, it can be used to monitor an
 
 To install Flailsafe v1.0 on your Linux system, just clone the repository and run the Makefile to install everything under /opt/flailsafe:
 
- git clone https://github.com/BefuddledBug/flailsafe.git
+ $ git clone https://github.com/BefuddledBug/flailsafe.git
 
- cd flailsafe
+ $ cd flailsafe
  
- sudo make install
+ $ sudo make install
 
 # Commands
 
@@ -58,11 +58,11 @@ To install Flailsafe v1.0 on your Linux system, just clone the repository and ru
  purge <file> : Permanently delete all stored snapshots of a file from the vault.
 
 # Examples
- sudo flailsafe add /etc/ssh/sshd_config
+ $ sudo flailsafe add /etc/ssh/sshd_config
  
- sudo flailsafe check
+ $ sudo flailsafe check
  
- sudo /opt/flailsafe/bin/flailsafe log | grep /absolute/path/of/monitored/file
+ $ sudo /opt/flailsafe/bin/flailsafe log | grep /absolute/path/of/monitored/file
 
 # Automated checks with cron
 
@@ -74,7 +74,7 @@ Running periodic checks allows flailsafe to promptly detect configuration change
 
 Flailsafe does not install services or modify system configuration files. To completely remove flailsafe and all stored data:
  
- sudo rm -rf /opt/flailsafe
+ $ sudo rm -rf /opt/flailsafe
  
 This will permanently delete all stored snapshots and logs.
 
